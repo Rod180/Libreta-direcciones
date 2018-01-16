@@ -22,6 +22,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import model.Persona;
+import view.VistaPersonaController;
 /**
  *
  * @author dam
@@ -82,6 +83,8 @@ public class LibretaDirecciones extends Application {
         }
         //añado a centro la vista persona
         layoutPrincipal.setCenter(vistaPersona);
+        VistaPersonaController controller = loader.getController();
+        controller.setLibretaDirecciones(this);
     }
 
     public Stage getPrimaryStage(){
